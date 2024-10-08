@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import "./Category.css"
 
 const Category = () => {
@@ -19,7 +20,6 @@ const Category = () => {
             setCategorys([...categorys, product.category])
         }
     })
-    console.log(categorys)
 
 
     return (
@@ -28,12 +28,13 @@ const Category = () => {
                 <h1 className="text-dark fontStyle mb-4">Browse by category</h1>
                 <div className="category-container container-fluid d-flex flex-row mb-5">
                     {categorys.length?categorys.map((category) => {
+                         
                         return (
-                            <a className="category-href" href={location+'products'}>
-                                <div className="category">
+                            <Link key={category} className="category-href" to = {`${location}products/${category}`}>
+                                <div  className="category">
                                     <p>{category}</p>
                                 </div>
-                            </a>
+                            </Link>
                             
                         )
                     })
