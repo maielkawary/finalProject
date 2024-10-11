@@ -14,13 +14,13 @@ function App() {
     <>
     
       <Router>
-      <Navbar />
+      {/* <Navbar /> */}
         <Routes>
           <Route path='/' Component={Home} />
           <Route path='/products/:categoryName' Component={Products} />
           <Route path='/products/:categoryName/productDetails/:id' Component={ProductDetails} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </>
   )

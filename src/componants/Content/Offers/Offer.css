@@ -1,0 +1,29 @@
+
+.latestOffers{
+    display: flex;
+    flex-direction: row;
+}
+.phoneStyle{
+    height: 70vh;
+}
+.imgHover {
+   transition: transform 1s;
+   
+  }
+.imgHover:hover{
+    transform: scale(1.1); 
+}
+.imgCards{
+   height: 230px;
+}
+
+
+.fontStyle {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+    font-weight: bolder;
+  }
+ 
+

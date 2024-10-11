@@ -1,0 +1,45 @@
+.fontStyle {
+    font-family: Arial, sans-serif; 
+  }
+  
+  .swiper-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .card1 {
+    width: 300px;
+    margin: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    text-align: center; 
+  }
+  
+  .card1 img {
+    width: 100%;
+    border-radius: 5px 5px 0 0; 
+  }
+  
+  .swiper-button {
+    background-color: rgb(56, 56, 183);
+    color: beige;
+    border: 2px solid  rgb(56, 56, 183) ;
+    border-radius: 200px;
+    height: 40px;
+    width: 100px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    margin-right: 5px;
+  }
+  
+  .swiper-button:hover {
+    background: #0056b3;
+  }
+  
