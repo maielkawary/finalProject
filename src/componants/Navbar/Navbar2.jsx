@@ -19,7 +19,7 @@ function Navbar2() {
         <a className="navbar-brand fw-bold fs-2" href='#' style={{ color: 'rgb(56, 56, 183)' }}>
           Luxora
         </a>
-        {/* <Link to={{}} className="navbar-brand fw-bold fs-2" href='' style={{ color: 'rgb(56, 56, 183)' }} >  Luxora</Link> */}
+          {/* <Link to={{'/home'}} className="navbar-brand fw-bold fs-2"  style={{ color: 'rgb(56, 56, 183)' }} >Luxora</Link>   */}
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
