@@ -262,7 +262,6 @@
       "id": "1",
       "userId": 1,
       "products": [
-        
         {
           "productId": 5,
           "quantity": 2
@@ -320,6 +319,14 @@
         {
           "productId": 18,
           "quantity": 2
+        },
+        {
+          "productId": 3,
+          "quantity": 2
+        },
+        {
+          "productId": 6,
+          "quantity": 1
         }
       ]
     }
