@@ -327,6 +327,14 @@
         {
           "productId": 6,
           "quantity": 1
+        },
+        {
+          "productId": 8,
+          "quantity": 1
+        },
+        {
+          "productId": 1,
+          "quantity": 4
         }
       ]
     }
