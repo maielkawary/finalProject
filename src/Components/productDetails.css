@@ -1,0 +1,154 @@
+#signupLink {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+#signupLink:hover {
+  text-decoration: underline;
+}
+
+#userDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#product-img:hover {
+  -webkit-animation: shake 1s linear infinite;
+  animation: shake 0.5s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    25% {
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+    50% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    75% {
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    
+}
+
+/* Style for full star */
+.full-star {
+    color: gold;
+    font-size: 1.5rem;
+  }
+  
+  /* Style for empty and half star (if needed) */
+  .half-star,
+  .empty-star {
+    color: lightgray;
+    font-size: 1.5rem;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 60%;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+    
+    /* text-align: center; */
+  }
+
+  .swiper-wrapper .card {
+    text-align: center;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .btn-warning {
+    margin-top: 10px;
+  }
+  
+h2 {
+    text-align: right;
+}
+h4 {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bolder;
+}
+.paraStyle {
+  padding: 0 10px 10px;
+  color:rgb(56, 56, 183);
+  font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.fontStyle {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+  font-weight: bolder;
+}
+
+.btn-add-to-cart {
+  background-color: rgb(56, 56, 183);
+    color: beige;
+    border: 2px solid rgb(56, 56, 183);
+    border-radius: 200px;
+    height: 40px;
+    width: 150px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    cursor: pointer;
+}
