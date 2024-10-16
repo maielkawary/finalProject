@@ -93,13 +93,13 @@
     display: flex;
     justify-content: center;
   }
-  
-  .card {
+/*   
+   .card {
     width: 100%;
     max-width: 300px;
     
-    /* text-align: center; */
-  }
+    
+  } */
 
   .swiper-wrapper .card {
     text-align: center;

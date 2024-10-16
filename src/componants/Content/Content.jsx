@@ -10,13 +10,13 @@ import ProductCarousel from "./ProductCarousel/ProductSwipper"
 const Content = () => {
     return(
         <>
-        <Navbar2/>
+        
         <Carousel/>
         <Offers/>
             <Merch />        
             <Category />
             <ProductCarousel/>
-            <Footer2/>
+           
         </>
     )
 }
