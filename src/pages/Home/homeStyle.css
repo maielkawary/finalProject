@@ -1,0 +1,231 @@
+#signupLink {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  
+  #signupLink:hover {
+    text-decoration: underline;
+  }
+  
+  #userDisplay {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  
+  .latestOffers{
+      display: flex;
+      flex-direction: row;
+  }
+  .phoneStyle{
+      height: 70vh;
+  }
+  .imgHover {
+     transition: transform 1s;
+     
+    }
+  .imgHover:hover{
+      transform: scale(1.1); 
+  }
+  .imgCards{
+     height: 230px;
+  }
+  .buttonStyle{
+      background-color: rgb(56, 56, 183);
+      color: beige;
+      border: 2px solid  rgb(56, 56, 183) ;
+      border-radius: 200px;
+      height: 40px;
+      width: 100px;
+  }
+  .buttonStyle:hover{
+  color: #FFF;
+    background: rgba(58, 133, 191, 0.75);
+    border: 2px solid rgba(58, 133, 191, 0.75);}
+    .imgCard{
+      height: 70vh;
+     border-image-repeat: stretch;
+    }
+  .content{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+  }
+  .fontStyle {
+      font-family: "EB Garamond", serif;
+      font-optical-sizing: auto;
+      
+      font-style: normal;
+      font-weight: bolder;
+    }
+    .buttonFont {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+    .cardColor{
+      background-color:rgb(235, 235, 235) ;
+    }
+   .sliderImg{
+      height: 400px;
+   }
+   .cardbgcolor{
+    background-color: #f2f7f2;
+  }
+  .hover-color{
+  &:hover{
+    background-color:#c7ccc7;
+  }}
+  .iconcolor{
+    color:  #91e6b3;
+  }
+  .backdivcolor{
+    background-color: #13544e;
+  }
+  .hover-color2{
+    &:hover{
+        color: #14a800;
+    }}
+    .cards-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .card img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .card {
+        margin: 0 0.5em;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+        border: none;
+        border-radius: 0;
+      }
+      .carousel-inner {
+        padding: 1em;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        background-color: #e1e1e1;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+  
+  
+  
+  /* //cardswiper */
+  .swiper-container {
+    width: 100%;
+    max-width: 100%; /* Max width for larger screens */
+    overflow:hidden
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 500px;
+  }
+  
+  .card1 {
+    min-width: 300px;
+    margin: 0 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card1 img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .card1 h5 {
+    margin-top: 20px;
+    height: 70px;
+    font-family: "EB Garamond", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 20px;
+  
+  }
+  
+  .card1 p {
+    padding: 0 10px 10px;
+    color:rgb(56, 56, 183);
+    font-family: "EB Garamond", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-weight: bolder;
+  }
+  
+  .card1 button {
+    
+    background-color: rgb(56, 56, 183);
+    color: beige;
+    border: 2px solid  rgb(56, 56, 183) ;
+    border-radius: 200px;
+    height: 40px;
+    width: 150px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    
+  }
+  
+  .card1 button:hover {
+    background-color: #afafaf;
+    border: none;
+  }
+  .button-container {
+    position: absolute;
+    top: 50%; /* Adjusted position */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .swiper-button {
+    background-color: rgb(56, 56, 183);
+    color: beige;
+    border: 2px solid  rgb(56, 56, 183) ;
+    border-radius: 200px;
+    height: 40px;
+    width: 100px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    margin-right: 5px;
+  }
+  
+  .swiper-button:hover {
+    background: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .card1 {
+      min-width: 80%; /* Responsive card width */
+  }
+  
+  .swiper-button {
+      padding: 8px 12px;
+  }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #catLeft{
+        display: none;
+    }}

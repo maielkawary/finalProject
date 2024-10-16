@@ -1,0 +1,12 @@
+.card {
+    position: relative; 
+  }
+  
+  .imgCard {
+    height: auto; 
+    width: 100%; 
+  }
+  .fontStyle {
+    font-family: 'Arial', sans-serif; 
+  }
+  

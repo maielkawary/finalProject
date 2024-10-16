@@ -1,0 +1,23 @@
+.category-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto; 
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.product {
+    background-color:  rgb(235, 235, 235);
+    padding: 10px;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product img {
+    width: 100%;
+    align-self: center;
+}
