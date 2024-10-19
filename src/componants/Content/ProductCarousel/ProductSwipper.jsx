@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import './ProductSwipper.css';
+import productsData from '../../../data/db.json';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const ProductCarousel = () => {
   const [products, setProducts] = useState([]);
@@ -15,6 +19,10 @@ const ProductCarousel = () => {
     } catch (error) {
       console.error('Error fetching products:', error);
     }
+  };
+  const navigate = useNavigate();
+  const buyNow = (id) => {
+    navigate(`/product/${id}`);  
   };
 
   // Shuffle array function
@@ -32,13 +40,13 @@ const ProductCarousel = () => {
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
   };
-  const buyNow = (productId) => {
-    window.location.href = `../product-details/product-details.html?id=${productId}`;
-  };
+  // const buyNow = (productId) => {
+  //   window.location.href = `../product-details/product-details.html?id=${productId}`;
+  // };
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    setProducts(productsData.products);
+}, []);
 
   return (
     <>
@@ -53,7 +61,8 @@ const ProductCarousel = () => {
               <img src={product.image} alt={product.title} />
               <h5>{product.title}</h5>
               <p className='mt-3'>${product.price}</p>
-              <button className='mb-3' onClick={() => buyNow(product.id)}>More details</button>
+              {/* <button className='mb-3' onClick={() => buyNow(product.id)}>More details</button> */}
+              <button className='mb-3' onClick={() => buyNow(product.id)}> More details</button>
             </div>
           ))}
         </div>
