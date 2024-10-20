@@ -20,23 +20,26 @@ const Products = () => {
     
     console.log(categoryName)
     return (
-      <div className="category-container">
-        {products.map((product) => {
-        if(product.category == categoryName){
-            return(
-                <Link to={`productDetails/${product.id}`} >
-                <div className="product" key={product.id}>
-                    <img src={product.image}></img>
-                    <h3>{product.title}</h3>
-                    <h4>{product.price}</h4>
-
-                </div>
-                </Link>
-            )
-        }
-        })}
-        
-        
+      <div className="page-container">
+        <div className="category-container">
+          {products.map((product) => {
+          if(product.category == categoryName){
+              return(
+                  <Link to={`productDetails/${product.id}`} className="card-link">
+                  <div className="product" key={product.id}>
+                      <img src={product.image}></img>
+                      <div className="product-card-info">
+                        <h3>{product.title}</h3>
+                        <h4>{product.price}</h4>
+                      </div>
+                  </div>
+                  </Link>
+              )
+          }
+          })}
+          
+          
+        </div>
       </div>
     );
   };
