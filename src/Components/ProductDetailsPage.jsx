@@ -6,6 +6,7 @@ import useAuth from "../redux/hooks/useAuth";
 import { addToCart } from "../redux/slices/cartSlice";
 import ProductQuantity from "./ProductQuantity";
 import "./productDetails.css";
+import ProductCarousel from "../componants/Content/ProductCarousel/ProductSwipper";
 
 // Render Stars
 function renderStars(rating) {
@@ -44,7 +45,7 @@ const ProductDetailsPage = () => {
       
     //   alert(id);
     // }
-  }, [dispatch, id]);
+  }, []);
 
   const handleAddToCart = () => {
     // if (!isAuthenticated) {
@@ -116,6 +117,7 @@ const ProductDetailsPage = () => {
           </div>
         </div>
       </div>
+      <ProductCarousel />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import axios from 'axios';
 // Async Thunk to fetch all products
 export const fetchProducts = createAsyncThunk('db/fetchProducts', async () => {
   const response = await axios.get('http://localhost:3001/products');
+  console.log('API Response:', response.data);
   return response.data;
 });
 

@@ -3,13 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+// import Login from '../../pages/login/Login';
+// import Register from '../../pages/register/Registration'
+
 function Navbar2() {
+  const navigate = useNavigate();
   const handleSignupClick = () => {
-    window.location.href = 'http://127.0.0.1:5500/login&register/register.html';
+    // window.location.href = '../src/pages/login/Login.jsx';
+    navigate('/registration');
   };
 
   const handleLoginClick = () => {
-    window.location.href = 'http://127.0.0.1:5500/login&register/login.html';
+    // window.location.href = 'http://127.0.0.1:5500/login&register/login.html';
+    navigate('/login');
   };
 
   // const handleCartClick = () => {
@@ -39,7 +46,7 @@ function Navbar2() {
             </li>
           </ul>
           <p onClick={handleSignupClick} style={{ cursor: 'pointer', marginTop: '25px', marginRight: '5px' }} className="text-dark fs-5 fontStyle">
-            Signup
+            Sign Up
           </p>
           <NavLink className="nav-link cart-icon" to="/products/cart/:userId" role="button">
         <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px', cursor: 'pointer' }}/>

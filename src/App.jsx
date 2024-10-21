@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home/Home'
 import { BrowserRouter , Route, Routes } from 'react-router-dom'
@@ -7,14 +8,26 @@ import  Footer  from './componants/Footer/Footer2.jsx'
 import  Navbar  from './componants/Navbar/Navbar2.jsx'
 // import { BrowserRouter } from "react-router-dom";
 // import './App.css';
-import ProductList from './Components/productList';
+import ProductList from './Components/ProductList.jsx';
 import ProductDetailsPage from './Components/ProductDetailsPage';
 import CartList from './Components/CartList';
 import CheckOut from "./Components/CheckOut";
 import Confirmation from "./Components/Confirmation";
+import Login from './pages/login/Login.jsx';
+import Registration from './pages/register/Registration.jsx';
+import ProfileCard from './pages/profilecard/ProfileCard.jsx';
+
 
 function App() {
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('userData');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
 
+  const handleRegistration = (userData) => {
+    setUser(userData);
+    localStorage.setItem('userData', JSON.stringify(userData)); // Save user data to localStorage
+  };
 
 
   return (
@@ -23,7 +36,12 @@ function App() {
           <Navbar />
       
        <Routes>
-          <Route path='/' Component={Home} />
+        <Route path='/' Component={Home} />
+        
+        <Route path="/login" element={<Login />} />
+          <Route path="/registration" element={<Registration onRegister={handleRegistration} />} />
+          <Route path="/" element={user ? <ProfileCard {...user} /> : <Registration onRegister={handleRegistration} />} />
+
           <Route path='/products/:categoryName' Component={Products} />
           <Route path='/products/:categoryName/productDetails/:id' Component={ProductDetails} />
        

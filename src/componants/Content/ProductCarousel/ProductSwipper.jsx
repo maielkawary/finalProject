@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import './ProductSwipper.css';
+
 
 const ProductCarousel = () => {
   const [products, setProducts] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   // Fetch products from API
   const fetchProducts = async () => {
@@ -33,7 +36,7 @@ const ProductCarousel = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
   };
   const buyNow = (productId) => {
-    window.location.href = `../product-details/product-details.html?id=${productId}`;
+    navigate(`/products/details/${Number(productId)}`);
   };
 
   useEffect(() => {

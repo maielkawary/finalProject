@@ -34,6 +34,8 @@ const ProductList = () => {
   const error = useSelector((state) => state.products.error);
 
   console.log(products);
+  console.log('Status:', status);
+console.log('Products:', products);
   useEffect(() => {
     if (status === "idle") {
       dispatch(fetchProducts());
