@@ -1,3 +1,4 @@
+// authSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -18,21 +19,6 @@ export const fetchUserData = createAsyncThunk('auth/fetchUserData', async (userI
   return response.data;
 });
 
-// Async thunk to add user data (register)
-export const addUserData = createAsyncThunk('auth/addUserData', async (userData) => {
-  const response = await axios.post('/api/register', userData);
-  return response.data;
-});
-
-// Async thunk to edit user data
-export const editUserData = createAsyncThunk('auth/editUserData', async ({ userId, userData }, { getState }) => {
-  const { auth } = getState();
-  const response = await axios.put(`/api/users/${userId}`, userData, {
-    headers: { Authorization: `Bearer ${auth.token}` },
-  });
-  return response.data;
-});
-
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -42,19 +28,25 @@ const authSlice = createSlice({
       state.currentUser = action.payload.user;
       state.token = action.payload.token;
       localStorage.setItem('token', action.payload.token);
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('currentUser', JSON.stringify(action.payload.user));
     },
     logout: (state) => {
       state.isAuthenticated = false;
       state.currentUser = null;
       state.token = null;
       localStorage.removeItem('token');
+      localStorage.setItem('isLoggedIn', 'false');
+      localStorage.removeItem('currentUser');
     },
     checkAuth: (state) => {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
       const token = localStorage.getItem('token');
-      if (token) {
-        state.isAuthenticated = true;
-        state.token = token;
-      }
+      const currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
+
+      state.isAuthenticated = isLoggedIn;
+      state.token = isLoggedIn ? token : null;
+      state.currentUser = isLoggedIn ? currentUser : null;
     },
   },
   extraReducers: (builder) => {
@@ -67,31 +59,6 @@ const authSlice = createSlice({
         state.currentUser = action.payload;
       })
       .addCase(fetchUserData.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message;
-      })
-      .addCase(addUserData.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(addUserData.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.isAuthenticated = true;
-        state.currentUser = action.payload.user;
-        state.token = action.payload.token;
-        localStorage.setItem('token', action.payload.token);
-      })
-      .addCase(addUserData.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message;
-      })
-      .addCase(editUserData.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(editUserData.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.currentUser = action.payload;
-      })
-      .addCase(editUserData.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       });

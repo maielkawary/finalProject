@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import './Login.css';
+import imageSrc from '../../assets/Logo.jpeg';
 
 const Login = () => {
   const navigate = useNavigate(); // Initialize navigate
@@ -71,7 +72,7 @@ const Login = () => {
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-9 col-lg-6 col-xl-5" style={{ width: '40%' }}>
             <img
-              src="photo_2024-09-27_15-25-13.jpg"
+              src={imageSrc}
               className="img-fluid mb-3 mt-4"
               alt="image"
               style={{ width: '100%' }}

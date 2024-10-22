@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './ProductSwipper.css';
 
+import productsData from '../../../data/db.json';
+
+
+
 
 const ProductCarousel = () => {
   const [products, setProducts] = useState([]);
@@ -11,7 +15,7 @@ const ProductCarousel = () => {
   // Fetch products from API
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://fakestoreapi.com/products');
+      const response = await fetch('http://localhost:3001/products');
       const data = await response.json();
       const shuffledProducts = shuffleArray(data).slice(0, 16); // Show 8 products
       setProducts(shuffledProducts);
@@ -35,13 +39,16 @@ const ProductCarousel = () => {
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
   };
+  // const buyNow = (productId) => {
+  //   window.location.href = `../product-details/product-details.html?id=${productId}`;
+  // };
   const buyNow = (productId) => {
     navigate(`/products/details/${Number(productId)}`);
   };
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+}, [fetchProducts]);
 
   return (
     <>
@@ -56,7 +63,8 @@ const ProductCarousel = () => {
               <img src={product.image} alt={product.title} />
               <h5>{product.title}</h5>
               <p className='mt-3'>${product.price}</p>
-              <button className='mb-3' onClick={() => buyNow(product.id)}>More details</button>
+              {/* <button className='mb-3' onClick={() => buyNow(product.id)}>More details</button> */}
+              <button className='mb-3' onClick={() => buyNow(product.id)}> More details</button>
             </div>
           ))}
         </div>
