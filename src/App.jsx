@@ -40,7 +40,7 @@ function App() {
         <Route path='/home' Component={Home} />
         <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration onRegister={handleRegistration} />} />
-          <Route path="/" element={user ? <ProfileCard {...user} /> : <Registration onRegister={handleRegistration} />} />
+          <Route path="/:name" element={user ? <ProfileCard {...user} /> : <Registration onRegister={handleRegistration} />} />
 
           <Route path='/products/:categoryName' Component={Products} />
           <Route path='/products/:categoryName/productDetails/:id' Component={ProductDetailsPage} />

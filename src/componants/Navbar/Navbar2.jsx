@@ -1,6 +1,6 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -45,13 +45,19 @@ function Navbar2() {
               </NavLink>
             </li>
           </ul>
-          <p onClick={handleSignupClick} style={{ cursor: 'pointer', marginTop: '25px', marginRight: '5px' }} className="text-dark fs-5 fontStyle">
+          <p onClick={handleSignupClick} style={{ cursor: 'pointer', marginTop: '25px', marginRight: '10px' }} className="text-dark fs-5 fontStyle">
             SignUp
           </p>
+          <p onClick={handleLoginClick} style={{ cursor: 'pointer', marginTop: '25px', marginRight: '5px' }} className="text-dark fs-5 fontStyle">
+            Login
+          </p>
           <NavLink className="nav-link cart-icon" to="/cart/:userId" role="button">
-        <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px', cursor: 'pointer' }}/>
+        <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px',marginRight:'10px', cursor: 'pointer' }}/>
       </NavLink>
-          <i className="fa-solid fa-user" onClick={handleLoginClick} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px', cursor: 'pointer' }}></i>
+      <NavLink className="nav-link user-icon" to="/:name" role="button">
+        <FontAwesomeIcon icon={faUser} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px', cursor: 'pointer' }}/>
+      </NavLink>
+          {/* <i className="fa-solid fa-user" onClick={handleLoginClick} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px', cursor: 'pointer' }}></i> */}
           {/* <i className="fa-solid fa-cart-shopping" onClick={handleCartClick} style={{ fontSize: '20px', marginTop: '16px', marginLeft: '10px', cursor: 'pointer' }}></i> */}
         </div>
       </div>

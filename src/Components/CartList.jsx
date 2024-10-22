@@ -107,7 +107,7 @@ const CartList = () => {
                     loading="lazy"
                   />
                   <div className="card-body order-2 order-md-1">
-                    <h4 className="card-title fontStyle">{product.title}</h4>
+                    <h1 className="card-title fontStyle">{product.title}</h1>
                     <p className="card-text text-dark fs-4">{product.description}</p>
                     <p className="card-text paraStyle fs-4" id="product-rate">
                       {renderStars(product.rating.rate)}

@@ -90,7 +90,7 @@ const ProductDetailsPage = () => {
         <div key={product.id} className="col-12 col-sm-12 col-md-8 align-content-top container-fluid row shadow">
         <div className="card d-flex flex-column mb-2">
   <div className="card-body">
-    <h4 className="card-title fontStyle">{product.title}</h4>
+    <h1 className="card-title fontStyle">{product.title}</h1>
   </div>
   <img
     className="img-fluid"

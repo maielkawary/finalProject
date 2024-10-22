@@ -45,9 +45,9 @@ const Registration = ({ onRegister }) => {
 
      // Call onRegister function to pass user data to the parent
     onRegister(userData);
-     navigate('/'); // Redirect to the profile page
+    //  navigate(`/${userData.name}`);
     alert('Registration successful!');
-    //navigate('/login'); // Redirect to login page on success
+    navigate('/login'); // Redirect to login page on success
   };
 
   return (

@@ -32,7 +32,7 @@ const Category = () => {
                         return (
                             <Link key={category} className="category-href" to = {`${location}products/${category}`}>
                                 <div  className="category">
-                                    <p>{category}</p>
+                                    <p>{category.toUpperCase()}</p>
                                 </div>
                             </Link>
                             
