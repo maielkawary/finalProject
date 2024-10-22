@@ -45,7 +45,7 @@ const ProductDetailsPage = () => {
       
     //   alert(id);
     // }
-  }, []);
+  }, [id]);
 
   const handleAddToCart = () => {
     // if (!isAuthenticated) {
@@ -63,8 +63,8 @@ const ProductDetailsPage = () => {
       dispatch(addToCart(cartItem))
         .unwrap()
         .then(() => {
-          alert("Product added to cart successfully!");
-          navigate("/products");
+          // alert("Product added to cart successfully!");
+          navigate(`/cart/${userId}`);
         })
         .catch((error) => {
           console.error("Failed to add product to cart:", error);

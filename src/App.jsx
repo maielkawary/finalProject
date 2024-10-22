@@ -46,7 +46,7 @@ function App() {
           <Route path='/products/:categoryName/productDetails/:id' Component={ProductDetailsPage} />
        
         <Route path="/products/details/:id" element={<ProductDetailsPage />} />
-        <Route path="/products/cart/:userId" element={<CartList />} />
+        <Route path="/cart/:userId" element={<CartList />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/checkout/:userId/:productId/:quantity" element={<CheckOut />} />
         <Route path="/confirmation" element={<Confirmation />} />
