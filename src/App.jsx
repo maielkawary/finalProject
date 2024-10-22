@@ -37,7 +37,7 @@ function App() {
       
        <Routes>
         <Route path='/' Component={Home} />
-        
+        <Route path='/home' Component={Home} />
         <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration onRegister={handleRegistration} />} />
           <Route path="/" element={user ? <ProfileCard {...user} /> : <Registration onRegister={handleRegistration} />} />

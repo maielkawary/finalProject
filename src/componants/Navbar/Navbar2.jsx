@@ -46,9 +46,9 @@ function Navbar2() {
             </li>
           </ul>
           <p onClick={handleSignupClick} style={{ cursor: 'pointer', marginTop: '25px', marginRight: '5px' }} className="text-dark fs-5 fontStyle">
-            Sign Up
+            SignUp
           </p>
-          <NavLink className="nav-link cart-icon" to="/products/cart/:userId" role="button">
+          <NavLink className="nav-link cart-icon" to="/cart/:userId" role="button">
         <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px', cursor: 'pointer' }}/>
       </NavLink>
           <i className="fa-solid fa-user" onClick={handleLoginClick} style={{ fontSize: '20px', marginTop: '15px', marginLeft: '10px', cursor: 'pointer' }}></i>

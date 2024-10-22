@@ -50,7 +50,8 @@ const ProductCarousel = () => {
     <div className="container">
       <div className="row">
         <div>
-          <h2 className="fontStyle ms-2 mt-5 mb-4">Shop now</h2>
+          {/* <h2 className="fontStyle ms-2 mt-5 mb-4 ">Shop now</h2> */}
+          <h1 className="text-dark fontStyle mb-4 mt-4">Shop now</h1>
           <div className="swiper-container">
             <div
               className="swiper-wrapper"

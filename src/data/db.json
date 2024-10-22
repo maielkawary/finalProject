@@ -310,7 +310,7 @@
         },
         {
           "productId": 7,
-          "quantity": 4
+          "quantity": 5
         },
         {
           "productId": 19,
@@ -330,11 +330,11 @@
         },
         {
           "productId": 8,
-          "quantity": 1
+          "quantity": 2
         },
         {
           "productId": 1,
-          "quantity": 10
+          "quantity": 11
         },
         {
           "productId": 10,
@@ -346,6 +346,10 @@
         },
         {
           "productId": 4,
+          "quantity": 2
+        },
+        {
+          "productId": 17,
           "quantity": 1
         }
       ]
